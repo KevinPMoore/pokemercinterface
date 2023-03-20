@@ -1,9 +1,9 @@
-
-
 const tempPage = () => {
-    return <div>
-        <p>Well here we are...</p>
-    </div>
-}
+    return (
+        <div>
+            <p>Well here we are...</p>
+        </div>
+    );
+};
 
-export default tempPage 
+export default tempPage;
