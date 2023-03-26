@@ -1,0 +1,52 @@
+{
+    "pokemonList": [
+        {
+            "id": 157,
+            "name": "Typhlosion",
+            "typeList": ["fire"],
+            "hp": 78,
+            "attack": 84,
+            "defense": 78,
+            "specialAttack": 109,
+            "specialDefense": 85,
+            "speed": 100,
+            "level": 100,
+            "moveList": []
+        },
+        {
+            "id": 160,
+            "name": "Feraligatr",
+            "typeList": ["water"],
+            "hp": 85,
+            "attack": 105,
+            "defense": 100,
+            "specialAttack": 79,
+            "specialDefense": 83,
+            "speed": 78,
+            "level": 100,
+            "moveList": []
+        },
+        {
+            "id": 154,
+            "name": "Meganium",
+            "typeList": ["grass"],
+            "hp": 80,
+            "attack": 82,
+            "defense": 100,
+            "specialAttack": 83,
+            "specialDefense": 100,
+            "speed": 80,
+            "level": 100,
+            "moveList": []
+        }
+    ],
+    "moveList": [
+        {
+            "name": "Flamethrower",
+            "elementType": "fire",
+            "damageType": "special",
+            "power": 9,
+            "effect": "TODO"
+        }
+    ]
+}

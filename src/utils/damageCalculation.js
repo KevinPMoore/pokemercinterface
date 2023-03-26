@@ -1,14 +1,16 @@
+import calculateTypeModifier from "./typeCalculation";
+
 const damageCalculation = (attacker, defender, move) => {
-    if (move?.type === "Status") {
+    if (move?.damageType === "status") {
         console.log("not a damaging move");
     }
-    const atkStat = move?.type === "Physical" ? attacker?.attack : attacker?.specialAttack;
-    const defStat = move?.type === "Physical" ? defender?.defense : defender?.specialDefense;
-    const attackerLevel = typeof attacker?.level === "number" ? attacker?.level : 0;
+    const atkStat = move?.damageType === "physical" ? attacker?.attack : attacker?.specialAttack;
+    const defStat = move?.damageType === "physical" ? defender?.defense : defender?.specialDefense;
     const movePower = typeof move?.power === "number" ? move?.power : 0;
-    //TODO: Include STAB
-    //TODO: Include Weakness/Resistance/Immunity
-    const damage = ((((2 * attackerLevel) / 5 + 2) * movePower * (atkStat / defStat)) / 50 + 2) * (Math.floor(Math.random() * 16) + 85);
+    const stab = attacker?.typeList.includes(move?.elementType) ? 1.5 : 1;
+    //TODO: Check for crit
+    //TODO: Fx call for secondary effects/non-damaging moves
+    const damage = Math.round(movePower * (atkStat / defStat) * stab * calculateTypeModifier(move?.elementType, defender?.typeList));
     console.log("damage = ", damage);
 };
 
