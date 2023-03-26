@@ -11,7 +11,7 @@ const damageCalculation = (attacker, defender, move) => {
     //TODO: Check for crit
     //TODO: Fx call for secondary effects/non-damaging moves
     const damage = Math.round(movePower * (atkStat / defStat) * stab * calculateTypeModifier(move?.elementType, defender?.typeList));
-    console.log("damage = ", damage);
+    return damage;
 };
 
 export default damageCalculation;

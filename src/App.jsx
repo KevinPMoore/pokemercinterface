@@ -1,10 +1,10 @@
 import "./App.css";
-import TempPage from "./pages/temp";
+import Battle from "./pages/Battle";
 
 function App() {
     return (
         <div className="App">
-            <TempPage />
+            <Battle />
         </div>
     );
 }
